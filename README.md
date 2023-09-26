@@ -29,34 +29,34 @@ spring:
                 datasource:
                     # 数据源的名称
                     flow:
-                    # 数据源类型（支持nacos、zookeeper、redis等）
-                    nacos:
-                        # 指定nacos地址
-                        server-addr: ${spring.cloud.nacos.server-addr}
-                        # 指定远程配置文件的名称，配置文件是由控制台生成的，因此data-id、group-id、namespace需要遵循控制台的规则
-                        data-id: ${spring.application.name}-flow-rules
-                        group-id: SENTINEL_GROUP
-                        namespace: 634f0e00-37b5-42ef-b028-cb1fe5bfc628
-                        # 目前只支持json
-                        data-type: json
-                        # 规则类型（限流、降级、熔断等），详见com.alibaba.cloud.sentinel.datasource.RuleType
-                        rule-type: flow
+                        # 数据源类型（支持nacos、zookeeper、redis等）
+                        nacos:
+                            # 指定nacos地址
+                            server-addr: ${spring.cloud.nacos.server-addr}
+                            # 指定远程配置文件的名称，配置文件是由控制台生成的，因此data-id、group-id、namespace需要遵循控制台的规则
+                            data-id: ${spring.application.name}-flow-rules
+                            group-id: SENTINEL_GROUP
+                            namespace: 634f0e00-37b5-42ef-b028-cb1fe5bfc628
+                            # 目前只支持json
+                            data-type: json
+                            # 规则类型（限流、降级、熔断等），详见com.alibaba.cloud.sentinel.datasource.RuleType
+                            rule-type: flow
                     degrade:
-                    nacos:
-                        server-addr: ${spring.cloud.nacos.server-addr}
-                        data-id: ${spring.application.name}-degrade-rules
-                        group-id: SENTINEL_GROUP
-                        namespace: 634f0e00-37b5-42ef-b028-cb1fe5bfc628
-                        data-type: json
-                        rule-type: degrade
+                        nacos:
+                            server-addr: ${spring.cloud.nacos.server-addr}
+                            data-id: ${spring.application.name}-degrade-rules
+                            group-id: SENTINEL_GROUP
+                            namespace: 634f0e00-37b5-42ef-b028-cb1fe5bfc628
+                            data-type: json
+                            rule-type: degrade
                     param-flow:
-                    nacos:
-                        server-addr: ${spring.cloud.nacos.server-addr}
-                        data-id: ${spring.application.name}-param-rules
-                        group-id: SENTINEL_GROUP
-                        namespace: 634f0e00-37b5-42ef-b028-cb1fe5bfc628
-                        data-type: json
-                        rule-type: param-flow
+                        nacos:
+                            server-addr: ${spring.cloud.nacos.server-addr}
+                            data-id: ${spring.application.name}-param-rules
+                            group-id: SENTINEL_GROUP
+                            namespace: 634f0e00-37b5-42ef-b028-cb1fe5bfc628
+                            data-type: json
+                            rule-type: param-flow
   ```
 
 #### 问题详述
